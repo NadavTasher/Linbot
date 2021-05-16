@@ -9,10 +9,9 @@ import { Server } from "./internal/server.mjs";
 // Create the server
 let mServer = new Server(8000);
 
-// Import the routes
-import { Routes } from "./external/matterbot.mjs";
-
-// Enable the routes
+// Import all things
+import { Routes } from "./external/linbot.mjs";
+// Insert routes
 mServer.insertAll(Routes);
 
 // Listen for requests

@@ -22,5 +22,9 @@ services:
             # Docker mount
             - /var/run/docker.sock:/var/run/docker.sock
 
+        # Environment file
+        env_file: 
+            - ../environment.env
+
 volumes:
     data:
