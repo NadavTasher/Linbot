@@ -56,7 +56,16 @@
 
     <!-- Application script -->
     <script type="text/javascript">
-        window.addEventListener("load", function () { });
+        window.addEventListener("load", async function () {
+            // Load modules
+            await Module.import("API", "UI");
+
+            // Get invite link
+            let id = await API.call("linbot", "link", {});
+
+            // Write invite link
+            "link".find().href = `https://discord.com/oauth2/authorize?client_id=${id}&permissions=124992&scope=bot`;
+        });
     </script>
 
     <!-- App Title -->
@@ -69,16 +78,9 @@
 </head>
 
 <body column>
-    <div>
-        <p huge center>{  }</p>
-        <div id="home">
-            <p small left>Linbot instance manager</p>
-            <button small right onclick="initialize();">Manage</button>
-        </div>
-        <div id="manage" hidden>
-    
-        </div>
-    </div>
+    <a id="link" text pointer gigantic center>{ }</a>
+    <br/>
+    <p medium center>Linbot - Linux shell bot</p>
 </body>
 
 </html>
