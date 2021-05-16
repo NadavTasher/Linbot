@@ -19,8 +19,8 @@ services:
             # Persistent data volume
             - data:/opt
 
-            # Configuration mount
-            - ./configuration/configuration.mjs:/projects/backend/external/configuration.mjs
+            # Docker mount
+            - /var/run/docker.sock:/var/run/docker.sock
 
 volumes:
     data:
