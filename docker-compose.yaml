@@ -23,8 +23,9 @@ services:
             - /var/run/docker.sock:/var/run/docker.sock
 
         # Environment file
-        env_file: 
-            - ../environment.env
+        environment: 
+            - DISCORD_TOKEN=1
+            - DISCORD_ID=2
 
 volumes:
     data:
