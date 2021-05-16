@@ -1,0 +1,26 @@
+# Select compose version
+version: "3"
+
+# Define services
+services: 
+
+    # Create matterbot service
+    linbot:
+
+        # Select service image
+        build: linbot
+
+        # Expose ports
+        ports: 
+            - 80:80
+
+        # Mount volumes
+        volumes:
+            # Persistent data volume
+            - data:/opt
+
+            # Configuration mount
+            - ./configuration/configuration.mjs:/projects/backend/external/configuration.mjs
+
+volumes:
+    data:

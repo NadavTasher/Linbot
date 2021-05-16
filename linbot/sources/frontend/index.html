@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+ Copyright (c) 2020 Nadav Tasher
+ https://github.com/NadavTasher/Template/
+-->
+<html row stretch lang="en">
+
+<head>
+    <!-- Charset -->
+    <meta charset="UTF-8" />
+
+    <!-- App Description -->
+    <meta name="description" content="AppDescription" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=5, user-scalable=yes, minimal-ui" />
+
+    <!-- Mobile -->
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Mobile Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="AppName" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Icons -->
+    <link rel="icon"
+        href="data:image/png;base64,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" />
+    <link rel="apple-touch-icon"
+        href="data:image/png;base64,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" />
+
+    <!-- Repositories -->
+    <meta name="repository-internal" content="modules/internal" />
+    <meta name="repository-external" content="modules/external" />
+
+    <!-- Template stylesheet -->
+    <link rel="stylesheet" href="template/template.css" />
+
+    <!-- Template scripts  -->
+    <script type="text/javascript" src="template/template.js"></script>
+
+    <!-- Application stylesheet -->
+    <style>
+        :root {
+            --text: #707070;
+            --theme: #FFFFFF;
+            --active: #C0C0C0;
+            --passive: #F0F0F0;
+        }
+
+        body {
+            max-width: 500px;
+        }
+    </style>
+
+    <!-- Application script -->
+    <script type="text/javascript">
+        window.addEventListener("load", function () { });
+    </script>
+
+    <!-- App Title -->
+    <title>AppName</title>
+
+    <!-- No Script -->
+    <noscript></noscript>
+
+    <!-- Additional -->
+</head>
+
+<body column>
+    <!--App Layout-->
+</body>
+
+</html>
