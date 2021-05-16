@@ -70,7 +70,7 @@ export class Linbot {
 		} catch (e) {
 			output = e.message;
 		} finally {
-			return output;
+			return output.substring(output.length - 1500);
 		}
 	}
 
