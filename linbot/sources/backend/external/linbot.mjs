@@ -37,7 +37,7 @@ export class Linbot {
 		});
 
 		// Create the container
-		return Process.execSync(`docker run -pids-limit 50 --tty --detach --name ${container} ${repository} /bin/sh`).toString();
+		return Process.execSync(`docker run --pids-limit 50 --tty --detach --name ${container} ${repository} /bin/sh`).toString();
 	}
 
 	static context(sessionID, directory) {
